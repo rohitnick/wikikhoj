@@ -39,10 +39,9 @@
 */
 
 $route['default_controller'] = "welcome";
-$route['404_override'] = 'welcome';
+$route['404_override'] = 'error';
 $route['answerIt/(:num)'] = "answerIt/index/$1";
-$route['myAnswer/(:num)'] = "myAnswer/index/$1";
-//$route['answerIt/savingAnswer'] = "answerIt/savingAnswer" ;
+$route['home/answers/(:num)'] = "home/answers/$1";
  
 
 /* End of file routes.php */

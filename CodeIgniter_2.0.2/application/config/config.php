@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'wikikhoj.com';
+$config['base_url']	= 'mikikhoj.com';
 
 /*
 |--------------------------------------------------------------------------
@@ -253,6 +253,7 @@ $config['sess_table_name']		= 'ci_sessions';
 $config['sess_match_ip']		= FALSE;
 $config['sess_match_useragent']	= TRUE;
 $config['sess_time_to_update']	= 300;
+
 
 /*
 |--------------------------------------------------------------------------

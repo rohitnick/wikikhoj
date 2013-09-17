@@ -40,11 +40,17 @@
 
 $active_group = 'default';
 $active_record = TRUE;
-
+/*
+$db['default']['hostname'] = 'mysql6.000webhost.com';
+$db['default']['username'] = 'a2477846_khojdb';
+$db['default']['password'] = 'khoj8wiki0com';
+$db['default']['database'] = 'a2477846_khojdb';
+*/
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
 $db['default']['password'] = '';
 $db['default']['database'] = 'khojdb';
+
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

@@ -8,20 +8,22 @@ class welcomemodel extends CI_Model
     }
 
 	
-	function putq($ques, $eid, $check)
+	function signUp($email, $password)
 	{
-		$sql1 ="SELECT * FROM spamt where ques='".$ques."'";
-		$result = mysql_query($sql1);
-		if(mysql_num_rows($result)>0)
-		{
-			$sq2="update spamt set scount=scount+1 where ques='".$ques."'";
-			mysql_query($sq2) or die ("wrong");
-		}
-		else
-		{
-			$sql="insert into rawt values(NULL,'$ques','$eid','$check',CURRENT_TIMESTAMP)";
-			mysql_query($sql) or die("wrong"); 
-		}
+			$query="insert into login values(NULL,'$email','$password',0,CURRENT_TIMESTAMP)";
+			$this->db->query($query);
 	}
 	
+	function checkEmail($email)
+	{
+		$query = "select email from login where email= '".$email."'";
+		$result=$this->db->query($query);
+		return $result->num_rows();
+	}
+	function checkLogin($email,$password)
+	{
+		$query = "select designation from login where email= '".$email."' AND password='".$password."'";
+		$result=$this->db->query($query)->row();
+		return $result;
+	}
 }
